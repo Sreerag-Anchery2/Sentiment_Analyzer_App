@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #102597;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            transform: translate(-30%, -30%);
+            color: #e5eefa;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+            font-size: 50px;
+        }
+
+        h3 {
+            color: #e5eefa;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+
+        /* Wrapper for scroll content, positioned below the first view */
+        .content-wrapper {
+            margin-top: 100vh; /* Starts content after one full viewport height */
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* Stack sections vertically */
+            align-items: flex-start; /* Align to start */
+            padding: 20px;
+        }
+
+        /* Add a scrollable section for the paragraph and links */
+        .scroll-section {
+            width: 80%; /* Full width for the scroll section */
+            margin: 20px 0; /* Margin for spacing */
+        }
+
+        /* Section styling */
+        .about-section{
+            width: 60%; /* Full width for both sections */
+            margin-bottom: 40px;
+            margin-left: 5%;
+        } 
+        .how-it-works-section {
+            width: 60%; /* Full width for both sections */
+            margin-bottom: 40px; /* Spacing between sections */
+            margin-left: 40%;
+            margin-right: 5%;
+        }
+
+        .contact-me{
+            width: 60%; /* Full width for both sections */
+            margin-bottom: 40px;
+            margin-left: 5%;
+        }
+
+        p {
+            color: #a5bcdb;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1.1em;
+        }
+
+        /* Link styling */
+        .link-container {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            width: 100%; /* Full width for links */
+            margin-top: 40px; /* Space above links */
+        }
+
+        a {
+            text-decoration: none;
+            color: #cce1fe;
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px #054ead;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+            max-width: 150px; /* Max width for links */
+            display: block;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>SENTIMENT ANALYSIS APP</h1>
+
+    <!-- Wrapper for content that shows after scrolling down -->
+    <div class="content-wrapper">
+        <div class="scroll-section about-section">
+            <h3>About</h3>
+            <p>The Sentiment Analysis App is a powerful tool that lets users analyze the emotional tone of any text, such as news articles, social media posts, or customer feedback. By leveraging advanced natural language processing algorithms, the app identifies whether the sentiment expressed is positive, negative, or neutral, helping users gain valuable insights into public opinions and trends. Easy to use, with real-time analysis and a secure login feature, this app is perfect for businesses, researchers, and individuals looking to understand sentiments and make data-driven decisions.</p>
+        </div>
+        
+        <div class="scroll-section how-it-works-section">
+            <h3>How it works?</h3>
+            <p>The sentiment analysis model utilizes natural language processing (NLP) techniques to evaluate and determine the emotional tone behind a piece of text. It begins by preprocessing the input data, which includes cleaning the text, removing stop words, and tokenizing sentences. The model then analyzes the processed text using machine learning algorithms trained on labeled datasets to classify the sentiment as positive, negative, or neutral. By examining the context, word choice, and sentiment-laden phrases, the model generates an accurate sentiment score, providing users with insights into public opinions, trends, and overall emotional responses to various subjects. This enables businesses and individuals to make data-driven decisions based on the sentiments expressed in textual data.</p>
+        </div>
+
+        <div class="scroll-section contact-me">
+            <h3>Contact Me</h3>
+            <p>Email : ancherysreerag@gmail.com <br>
+                Phone : +91 7902807741 <br>
+                Linkedin : www.linkedin.com/in/sreerag-anchery-569a3a2b2
+            </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="link-container">
+            <a href="{% url 'signup' %}">Sign Up</a>
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+    </div>
+</body>
+</html>
